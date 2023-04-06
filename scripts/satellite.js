@@ -48,7 +48,6 @@ function displaySatellites(satellites) {
 		output += `
       <li class="center">
         <h3>${satellite.id}</h3>
-        <p><strong>Place:</strong> ${satellite.Place}</p>
         <p><strong>Country:</strong> ${satellite.country}</p>
         <p><strong>Mass:</strong> ${satellite.mass}</p>
         <p><strong>Launcher:</strong> ${satellite.launcher}</p>
