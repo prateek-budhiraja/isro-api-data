@@ -12,11 +12,7 @@ function displayLaunchers(list) {
 
 	let output = "";
 	list.forEach((launcher) => {
-		output += `
-      <li>
-        <h3>${launcher.id}</h3>
-      </li>
-    `;
+		output += `<li>${launcher.id}</li>`;
 	});
 	launchersList.innerHTML = output;
 }

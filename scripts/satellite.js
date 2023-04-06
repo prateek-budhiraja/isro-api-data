@@ -28,6 +28,8 @@ const satelliteList = document.getElementById("satellite-list");
 		option.textContent = country[0].toUpperCase() + country.slice(1);
 		countrySelect.appendChild(option);
 	});
+
+	displaySatellites(satelliteData.customer_satellites);
 })();
 
 // Function to filter centers from all centers based on selected country

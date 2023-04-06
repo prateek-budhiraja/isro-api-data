@@ -20,6 +20,8 @@ const centersList = document.getElementById("centers-list");
 		option.textContent = state;
 		stateSelect.appendChild(option);
 	});
+
+	displayCenters(centerData.centres);
 })();
 
 // Function to filter centers from all centers based on selected state

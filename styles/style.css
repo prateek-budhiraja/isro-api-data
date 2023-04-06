@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,500;1,700&display=swap');
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   margin: 0;
   padding: 0;
+  color: #222;
 }
 
 header {
@@ -41,23 +44,42 @@ h1 {
   margin-bottom: 1rem;
 }
 
-button {
-  background-color: #222;
-  border: none;
-  color: #fff;
+button#main {
   padding: 0.75rem 1rem;
   font-size: 1.1rem;
-  border-radius: 0.25rem;
-  cursor: pointer;
 }
 
 button:hover {
   background-color: #444;
 }
 
+button {
+  background-color: #222;
+  border: none;
+  color: #fff;
+  padding: 0.2rem 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+
 footer {
   background-color: #222;
   color: #fff;
   padding: 1rem;
   text-align: center;
+}
+
+.center {
+  list-style: none;
+}
+
+h1,
+h2,
+h3 {
+  color: #000;
+}
+
+p {
+  margin-top: -10px;
 }
