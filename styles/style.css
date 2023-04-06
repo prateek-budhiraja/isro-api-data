@@ -22,7 +22,7 @@ nav li {
   margin: 0 0.5rem;
 }
 
-nav a {
+a {
   color: #fff;
   text-decoration: none;
   transition: color 0.2s ease-in-out;
