@@ -1,5 +1,10 @@
 let centerData = null;
 
+// Get DOM elements
+const searchButton = document.getElementById("search-button");
+const stateSelect = document.getElementById("state-select");
+const centersList = document.getElementById("centers-list");
+
 // iffie to fetch data from API
 (async () => {
 	const response = await fetch("https://isro.vercel.app/api/centres");
@@ -9,7 +14,6 @@ let centerData = null;
 	const states = [...new Set(centerData.centres.map((center) => center.State))];
 
 	// Create options for each state
-	const stateSelect = document.getElementById("state-select");
 	states.forEach((state) => {
 		const option = document.createElement("option");
 		option.value = state;
@@ -17,11 +21,6 @@ let centerData = null;
 		stateSelect.appendChild(option);
 	});
 })();
-
-// Get DOM elements
-const searchButton = document.getElementById("search-button");
-const stateSelect = document.getElementById("state-select");
-const centersList = document.getElementById("centers-list");
 
 // Function to filter centers from all centers based on selected state
 async function getCenters(state) {
