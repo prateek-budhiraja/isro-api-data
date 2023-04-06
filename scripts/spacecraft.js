@@ -1,14 +1,15 @@
 const spacecraftContainer = document.getElementById("spacecrafts-list");
 
-async function fetchSpacecraftData() {
+let spacecraftData = null;
+
+(async () => {
 	const response = await fetch("https://isro.vercel.app/api/spacecrafts");
-	const spacecraftData = await response.json();
-	return spacecraftData;
-}
+	spacecraftData = await response.json();
+	displaySpacecrafts(spacecraftData);
+})();
 
 function displaySpacecrafts({ spacecrafts }) {
 	if (!spacecrafts) return;
-
 	spacecraftContainer.innerHTML = "";
 
 	spacecrafts.forEach((spacecraft) => {
@@ -18,7 +19,3 @@ function displaySpacecrafts({ spacecrafts }) {
 		spacecraftContainer.appendChild(spacecraftDetails);
 	});
 }
-
-fetchSpacecraftData()
-	.then((data) => displaySpacecrafts(data))
-	.catch((error) => console.log(error));
